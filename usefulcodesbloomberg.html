@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=defvice-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link id="codyframe" rel="stylesheet" href="./assets/css/style.css">
+  <script>
+    if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
+  </script> 
+<!--   <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/components/_1_accordian.js"></script> -->
+  <script src="https://kit.fontawesome.com/5a0bc27e0f.js" crossorigin="anonymous"></script>
+  <title>Useful codes and functions in Bloomberg - Investing in the AIM market</title>
+</head>
+
+<!--HEADER NAVIAGTION-->
+<header class="f-header js-f-header position-relative">
+  <div class="f-header__mobile-content container max-width-lg">
+    <div class="header__logo">
+
+      <img src="./assets/uomlogo.png" href="http://www.manchester.ac.uk" height="100px" style="padding-top: 35px;">
+      
+        
+    </div>
+
+    <button class="reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus" aria-label="Toggle menu">
+      <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
+    </button>
+  </div>
+
+
+    <button class="btn btn--subtle header__trigger js-header__trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav">
+      <i class="header__trigger-icon" aria-hidden="true"></i>
+      <span>Menu</span>
+    </button>
+  </div>
+
+  <div class="f-header__nav" role="navigation">
+    <div class="f-header__nav-grid justify-between@md container max-width-lg">
+      <div class="f-header__nav-logo-wrapper flex-grow flex-basis-0 padding-x-sm">
+        <a href="#0" class="f-header__logo">
+          <img src="./assets/uomlogo.png" href=""  style="padding-top: 35px;">
+            <title>Go to homepage</title>
+        </a>
+      </div>
+      
+          <nav class="header__nav js-header__nav" id="header-nav" role="navigation" aria-label="Main">
+            <div class="header__nav-inner">
+              <div class="header__label">Main menu</div>
+              <ul class="header__list">
+                <li class="header__item"><a href="#indices" class="header__link">Indices</a></li>
+                <li class="header__item"><a href="#constituents" class="header__link">Constituent indices</a></li>
+                <li class="header__item"><a href="#equities" class="header__link" >Equities</a></li>
+                
+                <li class="header__item"><a href="./index.html" class="header__nav-btn btn btn--primary">Return to the main resource</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+    
+      
+      </div>
+
+      <section class="padding-y-lg">
+        <div class="container max-width-sm bg-white color-white padding-md">
+          <h1 id="title">Useful codes and functions in Bloomberg</h1>
+        </div>
+      </section>
+
+      <section class="padding-y-md">
+        <div class="container max-width-sm bg-contrast-low color-bg padding-md">
+          <article class="text-component line-height-lg v-space-md">
+               <img src="assets/images/ucaf1.png" alt="screenshot of search results" class="padding-md"></a>
+            <p class="color-black">The screenshot above shows some of the general information you might see after searching for the FTSE AIM 100 index. Some useful searches you could try out to help you with this project are listed below. Click in the search bar at the top of the Bloomberg screen, just below the < > back and forward arrows, then type. Searches are not case-sensitive.</p>
+
+            </article>
+
+            <article class="text-component line-height-lg v-space-md color-black padding-top-lg">
+                <h3 id="indices">Indices</h3>
+                To find the <strong>FTSE AIM 100 Index</strong> (the largest 100 companies in the alternative investment market), follow these steps:
+                <ol class="list list--ol padding-top-md">
+                    <li>Type <strong>‘aim100’</strong> without a space and do not press Enter.</li>
+                    <li>In the search suggestions, look under <strong>'Securities'</strong></li>
+                    <li>Select code <strong>‘AIM100 Index’</strong> which means <strong>‘FTSE AIM 100 Index’</strong>.</li>
+                    <li>From the next menu, click on code <strong>‘DES’</strong> which means <strong>‘Security Description’</strong>.</li>
+
+                </ol>
+                To search for an <strong>AIM index for a specific sector</strong>, follow these steps:
+                <ol class="list list--ol padding-top-md">
+                  <li>Type <strong>‘aim’</strong> and do not press Enter.</li>
+                  <li>In the search suggestions, click <strong>‘More Securities…’.</strong>
+                  </li>
+                  <li>You are taken to the Security Finder function which is currently showing all securities which begin with the letters ‘aim’. Change the <strong>‘Category’</strong> from <strong>‘All Securities’</strong> to <strong>‘Index/Stats’</strong>.</li>
+                  <li>In the <strong>‘Name’</strong> column, in the amber field, type a sector such as <strong>‘technology’</strong> and press Enter.</li>
+                  <li>f the sector is found, select the first match which should look like code <strong>‘AXTECH’</strong> which means <strong>‘FTSE AIM All-Share Technology Index GBP’</strong>.</li>
+                  <li>From the next menu, click on code <strong>‘DES’</strong> which means <strong>‘Security Description’</strong>
+                    .</li>
+                    </ol>
+                    
+
+                    <div class="text-divider padding-xs"></div>
+                    <h5><strong>Alternative:</strong> if you are using a physical Bloomberg terminal: For all the index searches, you could also have typed the code (for example ‘AXX’) then pressed the yellow F10 ‘Index’ key then Enter.</h5>
+                    <div class="text-divider padding-xs"></div>
+
+              <h3 id="constituents">Constituents of indices</h3>
+              To see which companies are constituents (members) of an index, including the weighting applied to each member, follow these steps:
+
+              <ol class="list list--ol padding-top-md">
+<li>Make sure you have already loaded an index such as the AIM All-Share Technology Index (AXTECH Index).</li>
+<li>In the Bloomberg search bar, type <strong>‘member’</strong> and do not press Enter.</li>
+<li>In the search suggestions, look under ‘Functions’.</li>
+<li>Select code <strong>‘MEMB’</strong> which means <strong>‘Member Weightings’</strong>.</li>
+<li>The members appear in a table. They are sorted by the <strong>'Weight %’</strong> column by default.</li>
+<li>Do you want to know what the weight means? Open the Bloomberg Help Page for this function. You may see a green <strong>‘HELP’</strong> button at the top of the window, or press the green F1 <strong>‘Help’</strong> key if you are sat at a Bloomberg terminal. It will load the Help Page for the current function in a pop-up window with instructions and definitions.</li>
+<li>Do you want to export all the constituents? Go back to the main window, see the horizontal red menu and click on <strong>‘Export’</strong> then <strong>‘Excel’</strong>. The data will load in a new Excel document. (See our <a href="https://manchester-uk.libanswers.com/teaching-and-learning/faq/244725" target="_blank" rel="noopener">Accessing Bloomberg Web</a> guide for how to download this file to your computer.)</li>
+
+              </ol>
+            
+            <h3 id="equities">Equities</h3>
+            You can simply search for the name of the company you are interested in and Bloomberg will attempt to retrieve the relevant company code for you. Some relevant example codes for AIM companies are provided below:
+            <ol class="list list--ol padding-top-md">
+              <li><strong>NICL LN Equity</strong>: Nichols PLC (London)</li>
+              <li><strong>BOO LN Equity</strong>: Boohoo Group PLC (London)</li>
+              <li><strong>ASC LN Equity</strong>: ASOS PLC (London)</li>
+            </ol>
+
+            <div class="text-divider padding-xs"></div>
+            <h5><strong>Alternative:</strong> if you are using a physical Bloomberg terminal: For all the equity searches, you could also have typed the code (for example <strong>‘NICL LN’</strong> with a space) then pressed the yellow F8 <strong>‘Equity’</strong> key then Enter.</h5>
+            <div class="text-divider padding-xs"></div>
+
+            Once you have selected a company you can then input the codes below to access useful features related to your company of choice:
+            <ol class="list list--ol padding-top-md">
+              <li><strong>DES</strong>: Security Description</li>
+              <li><strong>GP</strong>: Price Chart (expand menu, overlay lines, stack axes, export)</li>
+              <li><strong>ESG</strong>: Environment, Social and Governance Analysis</li>
+              <li><strong>FA</strong>: Financial Analysis</li>
+              </ol>
+              The Security Description and Price Chart features were described in our  <a href="https://medium.com/specialist-library-support/getting-started-with-searching-bloomberg-anywhere-ac54b292549" target="_blank" rel="noopener">Getting started with searching Bloomberg Anywhere resource.</a>
+              </article>
+              </div>
+              </section>
+              </html>
